@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tasty Bites - Online Food Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f9f9;
+      color: #333;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(90deg, teal, #0aa3c0);
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav {
+      background: #026e6d;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #e0fffa;
+    }
+
+    /* HERO */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 8px;
+    }
+
+    /* PRODUCTS */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 15px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card h3 { margin: 10px 0 5px; }
+    .card p { margin: 0 0 10px; color: #666; }
+    .card button {
+      background: teal;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .card button:hover {
+      background: #0aa3c0;
+    }
+
+    /* ABOUT */
+    .about {
+      background: #eaf7f6;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .about h2 {
+      color: teal;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* CONTACT */
+    .contact {
+      padding: 40px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .contact h2 { color: teal; }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button[type="submit"] {
+      background: teal;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background: #0aa3c0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #026e6d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>🍔 Main Campus Tasty Bites</h1>
+    <p>Delicious Meals Delivered Fresh!</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <h1>Welcome to Tasty Bites</h1>
+    <p>Order your favorite meals online — anytime, anywhere!</p>
+  </section>
+ 
+  <!-- MENU -->
+  <section class="products" id="menu">
+    <!-- BURGERS -->
+    <div class="card"><img src="1.jpg"><h3>Beef Burger</h3><p>₱120.00</p><button>Add to Cart</button></div>
+    <div class="card"><img src="2.jpg"><h3>Double Cheese Burger</h3><p>₱160.00</p><button>Add to Cart</button></div>
+    <div class="card"><img src="3.jpg"><h3>Chicken Burger</h3><p>₱130.00</p><button>Add to Cart</button></div>
+
+    <!-- PIZZA -->
+    <div class="card"><img src="4.jpg"><h3>Cheese Pizza</h3><p>₱250.00</p><button>Add to Cart</button></div>
+    <div class="card"><img src="5.jpg"><h3>Pepperoni Pizza</h3><p>₱270.00</p><button>Add to Cart</button></div>
+    <div class="card"><img src="6.jpg"><h3>Hawaiian Pizza</h3><p>₱260.00</p><button>Add to Cart</button></div>
+
+    <!-- CHICKEN & RICE MEALS -->
+    <div class="card"><img src="https://via.placeholder.com/220x150?text=Fried+Chicken"><h3>Fried Chicken Meal</h3><p>₱150.00</p><button>Add to Cart</button></div>
+    <div class="card"><img src="https://via.placeholder.com/220x150?text=Adobo+Rice+Meal"><h3>Adobo Rice Meal</h3><p>₱140.00</p><button>Add to Cart</button></div>
+    <div class="card"><img src="https://via.placeholder.com/220x150?text=Pork+Sinigang"><h3>Pork Sinigang</h3><p>₱180.00</p><button>Add to Cart</button></div>
+
+    <!-- DRINKS -->
+    <div class="card"><img src="https://via.placeholder.com/220x150?text=Milk+Tea"><h3>Classic Milk Tea</h3><p>₱80.00</p><button>Add to Cart</button></div>
+    <div class="card"><img src="https://via.placeholder.com/220x150?text=Coffee"><h3>Caramel Coffee</h3><p>₱90.00</p><button>Add to Cart</button></div>
+    <div class="card"><img src="https://via.placeholder.com/220x150?text=Iced+Latte"><h3>Iced Latte</h3><p>₱100.00</p><button>Add to Cart</button></div>
+
+    <!-- DESSERTS -->
+    <div class="card"><img src="https://via.placeholder.com/220x150?text=Chocolate+Cake"><h3>Chocolate Cake</h3><p>₱90.00</p><button>Add to Cart</button></div>
+    <div class="card"><img src="https://via.placeholder.com/220x150?text=Ice+Cream+Sundae"><h3>Ice Cream Sundae</h3><p>₱70.00</p><button>Add to Cart</button></div>
+    <div class="card"><img src="https://via.placeholder.com/220x150?text=Fruit+Salad"><h3>Fruit Salad</h3><p>₱85.00</p><button>Add to Cart</button></div>
+
+    <!-- SIDES -->
+    <div class="card"><img src="https://via.placeholder.com/220x150?text=French+Fries"><h3>French Fries</h3><p>₱60.00</p><button>Add to Cart</button></div>
+    <div class="card"><img src="https://via.placeholder.com/220x150?text=Hotdog+Sandwich"><h3>Hotdog Sandwich</h3><p>₱70.00</p><button>Add to Cart</button></div>
+    <div class="card"><img src="https://via.placeholder.com/220x150?text=Nachos"><h3>Cheesy Nachos</h3><p>₱95.00</p><button>Add to Cart</button></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+      Tasty Bites is your go-to online food store that serves freshly made meals 
+      every day. Our mission is to provide convenient and delicious food to everyone 
+      craving for comfort bites — from burgers to milk tea, we’ve got you covered!
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="alert('Message sent successfully!'); return false;">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+<!-- DEVELOPERS BUTTON -->
+<section style="text-align:center; padding:20px; background:#f0f0f0;">
+  <button onclick="showDevelopers()" style="padding:10px 20px; background:teal; color:white; border:none; border-radius:5px; cursor:pointer;">
+    Developers / Credits
+  </button>
+
+  <div id="devList" style="display:none; margin-top:15px; text-align:left; max-width:300px; margin-left:auto; margin-right:auto;">
+    <ul style="list-style:none; padding:0;">
+	<li>Nadjer Cosain</li>      
+	<li>Alnoh Lucas</li>
+        <li>Ansar Malawi</li>
+        <li>Ansari Tonong Amil</li>
+        <li>Fe Rie</li>
+	<li>Egin Nhofhie</li>
+	<li>Esnaira Dico's</li>    
+	<li>HI RA KU</li>
+	<li>JO HN</li>
+	<li>Madzz Kamensa</li>
+	<li>Norhamen Musa Lakman</li>
+	<li>Nursan Maguid</li>
+	<li>Prince Alo</li>
+      
+    </ul>
+  </div>
+</section>
+
+<script>
+function showDevelopers() {
+  var x = document.getElementById("devList");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 CCNHS-Main Campus Tasty Bites | Designed in Notepad 💻
+  </footer>
+</body>
+</html>
